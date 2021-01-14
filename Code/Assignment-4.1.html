@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try, Catch and Finally</title>
+</head>
+<style>
+    .centerdv{
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+</style>
+<body>
+    <div class="centerdv">
+        <p>Enter the Number: <input id="num" type="text"></p>
+        <button type="button" onclick="validate()">Submit</button>
+        <p id="message"></p>
+    </div>
+    <script>
+        function validate(){
+            var msg,a,b;
+            msg=document.getElementById("message");
+            msg.innerHTML=" ";
+            a=document.getElementById("num").value;
+            try{
+                if(a==" ") throw "is empty";
+                if(isNaN(a)) throw "is not a number";
+                a=Number(a);
+                if(a<0) throw "less than 0.";
+                if(a%2!=0) throw "not divisible by 2.";
+                if((a*a)>=100) throw "square not less than 100.";
+                }
+            catch(err){
+                msg.innerHTML="Input "+err;
+            }
+            finally{
+                document.getElementById("num").value=" ";
+            }
+        }
+    </script>
+</body>
+</html>

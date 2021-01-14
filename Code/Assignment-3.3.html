@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+<style>
+    .centerdv{
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+</style>
+<body>
+    <div class="container centerdv">
+        <form method="POST">
+            <p>Username: <input type="text" id="username"></p>
+            <p>Password: <input type="password" id="pass"></p>
+            <br>
+            <button type="button" onclick="validate()">Submit</button>
+            </form>
+            <p id="demo1"></p>
+            <p id="demo2"></p>
+        </div>
+        
+    <script>
+        function validate(){
+            var x,y,u,p;
+            x=document.getElementById("username").value;
+            y=document.getElementById("pass").value;
+            if(x!=" "){
+                u="Username is Valid";
+            }else{
+                u="Username is Invalid";
+            }
+            if(y.length>6){
+                p="Password is Valid";
+            }else{
+                p="Password is Invalid";
+            }
+            document.getElementById("demo1").innerHTML=u;
+            document.getElementById("demo2").innerHTML=p;
+        }
+    </script>
+</body>
+</html>

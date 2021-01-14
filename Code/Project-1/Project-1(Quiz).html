@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edureka Quiz</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito">
+    <link href="quizstyles.css"rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
+    <script src="quiz.js"></script>
+</head>
+<body>
+    <h1>Edureka! Quiz</h1>
+    <div id="percentage"></div>
+    <br>
+    <form id="quiz"name="quiz">
+        <p id="ques1">What is 44+55?</p>
+        <input type="radio" name="question1" value="11"/><span id="11">11</span>
+        <input type="radio" name="question1" value="55"/><span id="55">55</span></br>
+        <input type="radio" name="question1" value="88"/><span id="88">88</span>
+        <input type="radio" name="question1" value="99"/><span id="a1">99</span>
+        <p id="ques2">Study of the structure of body is called______</p>
+        <input type="radio" name="question2" value="Anatomy"/><span id="a2">Anatomy</span> 
+        <input type="radio" name="question2" value="Biology"/><span id="Biology">Biology</span></br> 
+        <input type="radio" name="question2" value="Psychology"/><span id="Psychology">Psychology</span> 
+        <input type="radio" name="question2" value="Botany"/><span id="Botany">Botany</span>
+        <p id="ques3">The capital of India is______</p>
+        <input type="radio" name="question3" value="Mumbai"/><span id="Mumbai">Mumbai</span> 
+        <input type="radio" name="question3" value="Delhi"/><span id="a3">Delhi</span></br> 
+        <input type="radio" name="question3" value="Kolkata"/><span id="Kolkata">Kolkata</span>
+        <input type="radio" name="question3" value="Bangalore"/><span id="Bangalore">Bangalore</span></br>
+        <input id="button" type="button" value="I'm finished!" onclick="check();">
+    </form> 
+        <div id="after_submit">
+            <p id="number_correct"></p>
+            <p id="message"></p>
+            <img id="picture" width="400px">
+        </div>
+
+</body>
+</html>
